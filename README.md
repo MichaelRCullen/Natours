@@ -4,3 +4,5 @@
 Jonas Schmedtmann
 
 [Udemy Course](https://www.udemy.com/course/advanced-css-and-sass/learn/lecture/8312878?start=0#overview)
+
+[Jonas' Resource Page](http://codingheroes.io/resources/)
