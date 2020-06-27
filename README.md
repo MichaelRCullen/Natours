@@ -7,4 +7,6 @@ Jonas Schmedtmann
 
 [Course Material and Instructions on GitHub](https://github.com/jonasschmedtmann/advanced-css-course)
 
+[Coding Heroes - Jonas Schmedtmann blog](https://codingheroes.io/)
+
 [Jonas' Resource Page](http://codingheroes.io/resources/)
