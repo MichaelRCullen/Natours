@@ -10,18 +10,23 @@ Dark green: #28b485
 /*   */
 /* Simple Browser basic reset using universal */
 * {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box; /* Change the box model so borders and paddings are no longer added to total height and width that we specify for the box */
+}
+
+html {
+	/* Changing the global "root font size" - rem value scales according to this root value  */
+	font-size: 62.5%; /* Allows conversion of all absolute pixel units to relative rem units - easy way to change all measurements with one simple setting - best practice is % of default browser font size of 16px  */
 }
 
 body {
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
-	font-size: 16px;
+	/* font-size: 16px;  now covered with global "root font size" setting above in html element*/
 	line-height: 1.7;
 	color: #777;
-	padding: 30px;
+	padding: 3rem; /* original was 30px */
 }
 
 .header {
@@ -37,12 +42,12 @@ body {
 .logo-box {
 	/* Image is an inline element so a small container wrapper is good practice to style the image */
 	position: absolute; /* notes tbd  */
-	top: 40px; /* position measurement starts with a parent element (.header) reference set as "position: relative"  */
-	left: 40px;
+	top: 4rem; /* position measurement starts with a parent element (.header) reference set as "position: relative"  */
+	left: 4rem;
 }
 
 .logo {
-	height: 35px; /* width will scale accordingly when not specified and vice versa - prefer to control height of an element  */
+	height: 3.5rem; /* width will scale accordingly when not specified and vice versa - prefer to control height of an element  */
 }
 
 .text-box {
@@ -58,14 +63,14 @@ body {
 	text-transform: uppercase;
 
 	backface-visibility: hidden; /* Corrects minor animation shake */
-	margin-bottom: 60px;
+	margin-bottom: 6rem;
 }
 
 .heading-primary-main {
 	display: block; /* Block level elements occupy the entire width available, and create line breaks before and after them */
-	font-size: 60px;
+	font-size: 6rem;
 	font-weight: 400;
-	letter-spacing: 35px;
+	letter-spacing: 3.5rem;
 
 	animation-name: moveInLeft; /* using @keyframes */
 	animation-duration: 3s;
@@ -74,9 +79,9 @@ body {
 
 .heading-primary-sub {
 	display: block;
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: 400;
-	letter-spacing: 17.4px;
+	letter-spacing: 1.75rem;
 
 	animation: moveInRight 3s ease-out; /* using @keyframes combined */
 }
@@ -84,11 +89,11 @@ body {
 @keyframes moveInLeft {
 	0% {
 		opacity: 0;
-		transform: translateX(-100px);
+		transform: translateX(-10rem);
 	}
 
 	80% {
-		transform: translateX(10px);
+		transform: translateX(1rem);
 	}
 
 	100% {
@@ -100,11 +105,11 @@ body {
 @keyframes moveInRight {
 	0% {
 		opacity: 0;
-		transform: translateX(100px);
+		transform: translateX(10rem);
 	}
 
 	80% {
-		transform: translateX(-10px);
+		transform: translateX(-1rem);
 	}
 
 	100% {
@@ -116,7 +121,7 @@ body {
 @keyframes moveInBottom {
 	0% {
 		opacity: 0;
-		transform: translateY(30px);
+		transform: translateY(3rem);
 	}
 
 	100% {
@@ -130,20 +135,21 @@ body {
 	/* :link is a pseudo class - a special state of a selector - to style elements under a speacial condition */
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 15px 40px;
+	padding: 1.5rem 4rem;
 	display: inline-block; /* inline element because it is simply text - box model now works on this element as if it is a normal block element */
-	border-radius: 100px;
+	border-radius: 10rem;
 	transition: all .2s; /* shorthand version - transform on hover and active will be animated in relation to initial state - transition must be on initial state  */
+	font-size: 1.6rem;
 }
 
 .btn:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+	transform: translateY(-.3rem);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
 }
 
 .btn:active {
-	transform: translateY(-1px);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+	transform: translateY(-.1rem);
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 
 .btn-white {
