@@ -9,10 +9,12 @@ Dark green: #28b485
 
 /*   */
 /* Simple Browser basic reset using universal */
-* {
+*,
+*::after,
+*::before {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box; /* Change the box model so borders and paddings are no longer added to total height and width that we specify for the box */
+	box-sizing: inherit; /* Use the power of inheritance - forces inheritance to all sub elements - box-sizing property by itself is not inherited */
 }
 
 html {
@@ -21,6 +23,7 @@ html {
 }
 
 body {
+	box-sizing: border-box; /* Change the box model so borders and paddings are no longer added to total height and width that we specify for the box */
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
 	/* font-size: 16px;  now covered with global "root font size" setting above in html element*/
@@ -39,19 +42,19 @@ body {
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo-box {
+.header__logo-box {
 	/* Image is an inline element so a small container wrapper is good practice to style the image */
 	position: absolute; /* notes tbd  */
 	top: 4rem; /* position measurement starts with a parent element (.header) reference set as "position: relative"  */
 	left: 4rem;
 }
 
-.logo {
+.header__logo {
 	height: 3.5rem; /* width will scale accordingly when not specified and vice versa - prefer to control height of an element  */
 }
 
-.text-box {
-	position: absolute; /* notes tbd  */
+.header__text-box {
+	position: absolute; /* element is removed from normal flow - no impact on surrounding content or elements - can overlap other elements */
 	top: 40%; /* In relation to parent element */
 	left: 50%; /* In relation to parent element */
 	transform: translate(-50%, -50%); /* -50% no longer in relation to parent element - but of the element itself */
@@ -66,7 +69,7 @@ body {
 	margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
 	display: block; /* Block level elements occupy the entire width available, and create line breaks before and after them */
 	font-size: 6rem;
 	font-weight: 400;
@@ -77,7 +80,7 @@ body {
 	animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
 	display: block;
 	font-size: 2rem;
 	font-weight: 400;
@@ -152,7 +155,7 @@ body {
 	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 
-.btn-white {
+.btn--white {
 	background-color: #fff;
 	color: #777;
 }
@@ -180,7 +183,7 @@ body {
 }
 */
 
-.btn-animated {
+.btn--animated {
 	animation: moveInBottom .5s ease-out .75s;
 	animation-fill-mode: backwards;
 }
