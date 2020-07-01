@@ -10,3 +10,7 @@ Jonas Schmedtmann
 [Coding Heroes - Jonas Schmedtmann blog](https://codingheroes.io/)
 
 [Jonas' Resource Page](http://codingheroes.io/resources/)
+
+[Node JS - a JavaScript runtime](https://nodejs.org/en/)
+
+[NPM](https://www.npmjs.com/)
