@@ -1,0 +1,30 @@
+.header {
+	height: 95vh; /* at every point the height of this element should be 95% of the viewport height */
+	background-image: linear-gradient(
+        to right bottom, rgba($color-primary-light, 0.8),
+         rgba($color-primary-dark, 0.8)),
+		url(../img/hero.jpg);
+	background-size: cover;
+	background-position: top;
+	position: relative;
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+	&__logo-box {
+		/* Image is an inline element so a small container wrapper is good practice to style the image */
+		position: absolute; /* notes tbd  */
+		top: 4rem; /* position measurement starts with a parent element (.header) reference set as "position: relative"  */
+		left: 4rem;
+	}
+
+	&__logo {
+		height: 3.5rem; /* width will scale accordingly when not specified and vice versa - prefer to control height of an element  */
+	}
+
+	&__text-box {
+		position: absolute; /* element is removed from normal flow - no impact on surrounding content or elements - can overlap other elements */
+		top: 40%; /* In relation to parent element */
+		left: 50%; /* In relation to parent element */
+		transform: translate(-50%, -50%); /* -50% no longer in relation to parent element - but of the element itself */
+		text-align: center;
+	}
+}

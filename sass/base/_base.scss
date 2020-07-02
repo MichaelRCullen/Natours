@@ -1,0 +1,18 @@
+/*   */
+/* Simple Browser basic reset using universal */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit; /* Use the power of inheritance - forces inheritance to all sub elements - box-sizing property by itself is not inherited */
+}
+
+html {
+	/* Changing the global "root font size" - rem value scales according to this root value  */
+	font-size: 62.5%; /* Allows conversion of all absolute pixel units to relative rem units - easy way to change all measurements with one simple setting - best practice is % of default browser font size of 16px  */
+}
+
+body {
+    box-sizing: border-box; /* Change the box model so borders and paddings are no longer added to total height and width that we specify for the box */
+}
