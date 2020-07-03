@@ -123,6 +123,40 @@ body {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
 
+/*  */
+.row {
+  /* max-width best because if we have enough available space it will use value specified - otherwise fill 100% */
+  max-width: 114rem;
+  /* 1140px/10 = 114rem - standard definition of a row */
+  background-color: #eee;
+  margin: 0 auto;
+  /* Trick used to center block elements inside another block element - left and right auto  */
+  /*row has a zero pixel height because all child elements of this row element are floated so the
+                        height collapses and becomes zero - solution ... "clearfix" hack  */ }
+  .row:not(:last-child) {
+    /* without "not" this would select ".row:last-child() - "not" does the opposite - everything except the last child */
+    margin-bottom: 8rem;
+    /* all rows except last will receive margin  */ }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left;
+    /* Since we are using a float layout we always want the columns floated to left side   */ }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem;
+      /* Allows for gutter between columns except the last  */ }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+
 .header {
   height: 95vh;
   /* at every point the height of this element should be 95% of the viewport height */
