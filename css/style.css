@@ -78,6 +78,46 @@ body {
     animation: moveInRight 3s ease-out;
     /* using @keyframes combined */ }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  /* regular element occupied entire page width - inline-block allows for element to occupy only
+	 width of content   */
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  /* Will "clip" background to exactly where the text sits only - only visible where text is */
+  color: transparent;
+  /* Sets color of text to transparent to have the background effect visible only */
+  letter-spacing: .2rem;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
 .btn:link, .btn:visited {
   /* :link is a pseudo class - a special state of a selector - to style elements under a speacial condition */
   text-transform: uppercase;
@@ -123,12 +163,19 @@ body {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px; }
+
 /*  */
 .row {
   /* max-width best because if we have enough available space it will use value specified - otherwise fill 100% */
   max-width: 114rem;
   /* 1140px/10 = 114rem - standard definition of a row */
-  background-color: #eee;
   margin: 0 auto;
   /* Trick used to center block elements inside another block element - left and right auto  */
   /*row has a zero pixel height because all child elements of this row element are floated so the
@@ -142,7 +189,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: orangered;
     float: left;
     /* Since we are using a float layout we always want the columns floated to left side   */ }
     .row [class^="col-"]:not(:last-child) {
@@ -156,6 +202,10 @@ body {
     width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
   .row .col-1-of-4 {
     width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + (2 * 6rem)); }
 
 .header {
   height: 95vh;
@@ -185,3 +235,9 @@ body {
     transform: translate(-50%, -50%);
     /* -50% no longer in relation to parent element - but of the element itself */
     text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh;
+  /* 95vh - 75vh from polygon header file */ }

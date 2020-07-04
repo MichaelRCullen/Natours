@@ -19,18 +19,50 @@ body {
 		font-size: 6rem;
 		font-weight: 400;
 		letter-spacing: 3.5rem;
-	
+
 		animation-name: moveInLeft; /* using @keyframes */
 		animation-duration: 3s;
 		animation-timing-function: ease-out;
 	}
-	
+
 	&--sub {
 		display: block;
 		font-size: 2rem;
 		font-weight: 400;
 		letter-spacing: 1.75rem;
-	
+
 		animation: moveInRight 3s ease-out; /* using @keyframes combined */
+	}
+}
+
+.heading-secondary {
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: inline-block; /* regular element occupied entire page width - inline-block allows for element to occupy only
+	 width of content   */
+	background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+	-webkit-background-clip: text; /* Will "clip" background to exactly where the text sits only - only visible where text is */
+	color: transparent; /* Sets color of text to transparent to have the background effect visible only */
+	letter-spacing: .2rem;
+	transition: all .2s;
+
+	&:hover {
+		transform: skewY(2deg) skewX(15deg) scale(1.1);
+		text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+	}
+}
+
+.heading-tertiary {
+	font-size: $default-font-size;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-size: $default-font-size;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
 	}
 }
