@@ -14,3 +14,11 @@ Jonas Schmedtmann
 [Node JS - a JavaScript runtime](https://nodejs.org/en/)
 
 [NPM](https://www.npmjs.com/)
+
+
+
+### [Kevin Powell - From Idea to Layout - How I approach Design](https://youtu.be/KYFwcIRx16g)
+* [Eagle - A design library to get you 10X better organized](https://en.eagle.cool/)
+* [Eagle - extensions](https://en.eagle.cool/extensions)
+* [Figma - Where teams design together](https://www.figma.com/)
+
