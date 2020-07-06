@@ -21,4 +21,6 @@ Jonas Schmedtmann
 * [Eagle - A design library to get you 10X better organized](https://en.eagle.cool/)
 * [Eagle - extensions](https://en.eagle.cool/extensions)
 * [Figma - Where teams design together](https://www.figma.com/)
+* [Dribbble](https://dribbble.com/)
+* [Pinterest](https://www.pinterest.com/)
 
